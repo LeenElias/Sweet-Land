@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWEET LAND</title>
+  <style>
+    body{
+      background-color: #8cc871;
+    }
+     @media (max-width: 768px) {
+      body {
+        font-size: 100%;
+        padding: 0.95em;
+      }
+      }
+      @media print {
+        body *:not(.printable-menu, .printable-menu *) {
+        visibility: hidden;
+        margin: 0 !important;
+        padding: 0 !important;
+        }
+      }
+     
+      .menu{
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+      }
+      .Item-heading{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 0;
+      color: #ee3d4f;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: x-large;
+      }
+      .logo-container{
+      display: flex;
+      flex-direction: column; 
+      align-items: center;   
+      }
+      .logo{
+        max-width: 300px;
+        height: auto;
+      }
+      .item{
+       margin: 20px 0;
+       font-size: 30px;
+      }
+      .item-description{
+        font-size: medium;
+      }
+      .price{
+        float: right;
+        font-weight: bolder;
+        font-size: large;
+        color: #1e1a4d;
+      }
+      .note{
+        margin-top: 0;
+        padding-top: 0;
+        border: 0;
+        font-size: large;
+        text-align: center;
+        font-weight: bold;
+      }
+      .icecream-flavor{
+        text-align: center;
+      }
+     table {
+      margin: 0 auto;
+      border-collapse: separate;
+      border-spacing: 30px 15px; /* horizontal and vertical spacing */
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+    td {
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+     <img src="SweetLand_Logo.PNG" class="logo">
+  </div>
+<div class="menu">
+  <div> <!--Crepes-->
+    <div class="Item-heading">
+     <h1>Crêpes</h1>
+    </div>
+   <div>
+    <strong class="item"> Crêpe Nutella <span class="price">6$</span></strong>
+    <p>Nutella, Vanilla Ice Cream, White Chocolate, Nutella Biscuits.</p>
+   </div>
+   <div>
+    <strong class="item">Crêpe Strawberry <span class="price">7.5$</span> </strong>
+    <p>Chocolate, Strawberry, Vanilla Ice Cream, White Chocolate.</p>
+   </div>
+   <div>
+    <strong class="item">Crêpe Lotus <span class="price">6$</span></strong>
+    <p>Lotus Spread, Vanilla Ice Cream, Chocolate Dip.</p>
+   </div>
+   <div>
+    <strong class="item">Pistachio Crêpe <span class="price">7$</span></strong>
+    <p>Crunchy Pistachio, Vanilla Ice Cream, Pistachio Spread, White Chocolate </p>
+   </div>
+   <div>
+    <strong class="item">Kinder Bueno Crêpe <span class="price">7$</span></strong>
+    <P>Bueno Spread, Vanilla Ice Cream, White Chocolate, Chocolate Spread.</P>
+   </div>
+   <div>
+    <strong class="item"> Dubai Chocolate Crêpe <span class="price">8$</span></strong>
+    <p>Crunchy Pistachio Spread, Toasted Kunafa, Ice Cream, White Chocolate.</p>
+   </div>
+   <div>
+    <strong class="item">Peanut Butter Crêpe <span class="price">6$</span></strong>
+    <p>Peanut Butter Spread, Ice Cream, White Chocolate.</p>
+   </div>
+   
+  </div>
+
+
+  <div><!--Waffles-->
+    <div class="Item-heading">
+      <h1>Waffles</h1>
+    </div>
+    <div>
+      <strong class="item"> Nutella Waffle <span class="price">5$</span></strong>
+      <p>Nuteela Spread, Vanilla Ice Cream, White Chocolate.</p>
+    </div>
+    <div>
+      <strong class="item">Lotus Waffle <span class="price">5.5$</span></strong>
+      <p>Lotus Spread, Vanilla Ice Cream, White Chocolate.</p>
+    </div>
+    <div>
+      <strong class="item">Pistachio Waffle <span class="price">7$</span></strong>
+      <p>Crunchy Pistachio, Vanilla Ice Cream, Pistachio Spread, White Chocolate.</p>
+    </div>
+    <div>
+      <strong class="item">Kinder Bueno Waffle <span class="price">7$</span></strong>
+      <p>Bueno Spread, Vanilla Ice Cream, White Chocolate.</p>
+    </div>
+    <div>
+      <strong class="item">Oreo Waffle <span class="price">6$</span></strong>
+      <p>Crunchy Oreo SPread, Vanilla Ice Cream, White Chocolate, Chocolate Spread.</p>
+    </div>
+    <div>
+      <strong class="item">Dubai Chocolate Waffle <span class="price">8$</span></strong>
+      <p>Crunchy Pistachio Spread, Toasted Kunafa, Ice Cream, White Chocolate.</p>
+    </div>
+    <div>
+      <strong class="item">Peanut Butter Waffle <span class="price">6$</span></strong>
+      <p>Peanut BUtter Spread, Ice Cream, White Chocolate.</p>
+    </div>
+
+  </div>
+
+  <div><!--Specialties-->
+
+  </div>
+
+  <div><!--Ice Cream-->
+    <div class="Item-heading">
+      <h1>Ice Cream</h1>
+    </div>
+    <div>
+      <strong class="item">1 Scoop <span class="price">2$</span></strong>
+    </div>
+    <div>
+      <p class="note"> For each Additional scoop  1$</p>
+    </div>
+    <div>
+      <h2 class="icecream-flavor">Ice Cream Flavors</h2>
+    </div>
+    <div>
+      <table>
+  <tr>
+   <table>
+    <tr>
+      <td>Chocolate</td>
+      <td></td>
+      <td></td>
+      <td>Strawberry</td>
+    </tr>
+    <tr>
+      <td>Vanilla</td>
+      <td></td>
+      <td></td>
+      <td>Pistachio</td>
+    </tr>
+    <tr>
+      <td>Ashta</td>
+      <td></td>
+      <td></td>
+      <td>Kinder</td>
+    </tr>
+    <tr>
+      <td>Kiwi</td>
+      <td></td>
+      <td></td>
+      <td>Lemon</td>
+    </tr>
+    <tr>
+      <td>Lotus</td>
+      <td></td>
+      <td></td>
+      <td>Bubble Gum</td>
+    </tr>
+    <tr>
+      <td>Oreo</td>
+      <td></td>
+      <td></td>
+      <td>Passion Fruit</td>
+    </tr>
+  </table>
+
+    </div>
+  </div>
+  
+  <div> <!--Add ons-->
+      <div>
+      <h2 class="Item-heading">Add Ons</h2>
+     </div>
+     <div>
+      <strong>Banana <span>1$</span></strong><br>
+      <strong>Strawberry <span>2$</span></strong><br>
+      <strong>Kiwi <span>2$</span></strong><br>
+      <strong>One Scoop Ice Cream <span>1$</span></strong><br>
+      <strong>Cornflakes <span>0.5$</span></strong><br>
+      <strong>Oreo <span>0.5$</span></strong><br>
+      <strong>Lotus <span>0.5$</span></strong><br>
+      <strong>Kinder Bueno <span>1.5$</span></strong><br>
+      <strong>Kitkat <span>1$</span></strong><br>
+      <strong>M&M's <span>1$</span></strong><br>
+      <strong>Marshmallow <span>0.7$</span></strong><br>
+      <strong>Pineapple <span>2.5$</span></strong><br>
+      <strong>Maltersers <span>1$</span></strong><br>
+      <strong>Nutella Dip <span>1$</span></strong><br>
+      <strong>Lotus Dip <span>2$</span></strong><br>
+      <strong>White Chocolate Dip <span>2$</span></strong>
+     </div>
+  </div>
+
+
+
+</div>
+</body>
