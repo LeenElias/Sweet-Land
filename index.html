@@ -5,7 +5,7 @@
   <title>SWEET LAND</title>
   <style>
     body{
-      background-color: #8cc871;
+      background-color: white;
     }
     
         @media print {
@@ -26,7 +26,7 @@
       justify-content: center;
       margin-top: 30px;
       margin-bottom: 0;
-      color: #ee3d4f;
+      color: #f16b29;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       font-size: x-large;
       }
@@ -41,7 +41,7 @@
       }
       .item{
        margin: 20px 0;
-       font-size: 30px;
+       font-size: 20px;
       }
       .item-description{
         font-size: medium;
@@ -50,7 +50,7 @@
         float: right;
         font-weight: bolder;
         font-size: large;
-        color: #1e1a4d;
+        color: #181254;
       }
       .note{
         margin-top: 0;
@@ -63,17 +63,19 @@
       .icecream-flavor{
         text-align: center;
       }
-     table {
-      margin: 0 auto;
-      border-collapse: separate;
-      border-spacing: 30px 15px; /* horizontal and vertical spacing */
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-    }
-    td {
-      text-align: center;
-      padding: 10px;
-    }
+      .item-line {
+        display: flex;
+        justify-content: space-between;
+        width: 250px; 
+        margin: 20px 0;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      .flavor {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
   </style>
 </head>
 <body>
@@ -159,31 +161,31 @@
    <div class="Item-heading">
     <h1>Desserts</h1>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item">Chocolate Biscuit Cake<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;" >
     <strong class="item">Ashta Halawet Jeben<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item">Ashta 3esmaliye<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item"> Cheesecake Kinder<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item">Cheesecake Strawberry<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item">Cheescake Blackberry<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item">Cheesecake Lotus<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item">Cheescake Pistachio<span class="price"></span></strong>
    </div>
-   <div>
+   <div style="text-align: center;">
     <strong class="item">Cheesecake Oreo<span class="price"></span></strong>
    </div>
   </div>
@@ -192,39 +194,56 @@
     <div class="Item-heading">
       <h1>Ice Cream</h1>
     </div>
-    <div>
-      <strong class="item">1 Scoop <span class="price">2$</span></strong>
-    </div>
-    <div>
-      <p class="note"> For each Additional scoop  1$</p>
-    </div>
-    <div>
-      <h2 class="icecream-flavor">Ice Cream Flavors</h2>
-    </div>
+    <div class="flavor-list" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 400px; margin: auto;">
+    <span class="flavor" style="background-color: #f3e5ab;">Vanilla</span>
+    <span class="flavor" style="background-color: #8b4513;">Chocolate</span>
+    <span class="flavor" style="background-color: #ff4c61;">Strawberry</span>
+    <span class="flavor" style="background-color: #93c572;">Pistachio</span>
+    <span class="flavor" style="background-color: #ffa500;">Mango</span>
+    <span class="flavor" style="background-color: #d2691e;">Lotus</span>
+    <span class="flavor" style="background-color: #ffb6c1;">Kinder</span>
+    <span class="flavor" style="background-color: #da70d6;">Bubblegum</span>
+  </div>
+
+  <div class="ice-cream-price" style="text-align: center; margin-top: 15px;">
+    <strong class="item">1 scoop  &nbsp;&nbsp;&nbsp;&nbsp;2$</strong><br>
+    <strong class="item">Each additional scoop  &nbsp;&nbsp;&nbsp;&nbsp;1$</strong>
+  </div>
+</div>
   </div>
   
   <div> <!--Add ons-->
       <div class="Item-heading">
       <h1>Add Ons</h1>
      </div>
-     <div>
-      <strong class="item">Banana <span>1$</span></strong><br>
-      <strong class="item">Strawberry <span>2$</span></strong><br>
-      <strong class="item">Kiwi <span>2$</span></strong><br>
-      <strong class="item">One Scoop Ice Cream <span>1$</span></strong><br>
-      <strong class="item">Cornflakes <span>0.5$</span></strong><br>
-      <strong class="item">Oreo <span>0.5$</span></strong><br>
-      <strong class="item">Lotus <span>0.5$</span></strong><br>
-      <strong class="item">Kinder Bueno <span>1.5$</span></strong><br>
-      <strong class="item">Kitkat <span>1$</span></strong><br>
-      <strong class="item">M&M's <span>1$</span></strong><br>
-      <strong class="item">Marshmallow <span>0.7$</span></strong><br>
-      <strong class="item">Pineapple <span>2.5$</span></strong><br>
-      <strong class="item">Maltersers <span>1$</span></strong><br>
-      <strong class="item">Nutella Dip <span>1$</span></strong><br>
-      <strong class="item">Lotus Dip <span>2$</span></strong><br>
-      <strong class="item">White Chocolate Dip <span>2$</span></strong>
-     </div>
+     <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
+    
+    <!-- Column 1 -->
+    <div>
+      <div class="item-line"><span>Banana</span><span class="price">1$</span></div>
+      <div class="item-line"><span>Strawberry</span><span class="price">2$</span></div>
+      <div class="item-line"><span>Kiwi</span><span class="price">2$</span></div>
+      <div class="item-line"><span>One Scoop Ice Cream</span><span class="price">1$</span></div>
+      <div class="item-line"><span>Cornflakes</span><span class="price">0.5$</span></div>
+      <div class="item-line"><span>Oreo</span><span class="price">0.5$</span></div>
+      <div class="item-line"><span>Lotus</span><span class="price">0.5$</span></div>
+      <div class="item-line"><span>Kinder Bueno</span><span class="price">1.5$</span></div>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <div class="item-line"><span>Kitkat</span><span class="price">1$</span></div>
+      <div class="item-line"><span>M&M's</span><span class="price">1$</span></div>
+      <div class="item-line"><span>Marshmallow</span><span class="price">0.7$</span></div>
+      <div class="item-line"><span>Pineapple</span><span class="price">2.5$</span></div>
+      <div class="item-line"><span>Maltersers</span><span class="price">1$</span></div>
+      <div class="item-line"><span>Nutella Dip</span><span class="price">1$</span></div>
+      <div class="item-line"><span>Lotus Dip</span><span class="price">2$</span></div>
+      <div class="item-line"><span>White Chocolate Dip</span><span class="price">2$</span></div>
+    </div>
+
+  </div>
+</div>
   </div>
 
 
