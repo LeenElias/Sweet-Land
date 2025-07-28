@@ -7,26 +7,14 @@
     body{
       background-color: #8cc871;
     }
-     @media (max-width: 768px) {
-      body {
-        font-size: 100%;
-        padding: 0.95em;
+    
+        @media print {
+        body *:not(.printable-menu, .printable-menu *) {
+        visibility: hidden;
+        margin: 0 !important;
+        padding: 0 !important;
+        }
       }
-      }
-      
-      .printable-menu, .printable-menu * {
-        visibility: visible;
-        width: 100% !important;
-      }
-      .printable-menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      button, a {
-        display: none !important;
-      }
-     
       .menu{
       max-width: 600px;
       margin: 0 auto;
