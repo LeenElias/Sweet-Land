@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SWEET LAND</title>
   <style>
+    html{
+        scroll-behavior: smooth;
+    }
     body{
       background-color:#a1d797;
     }
@@ -19,6 +22,10 @@
       max-width: 600px;
       margin: 0 auto;
       text-align: left;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 40px;
+      padding: 20px 25px 35px;
+      backdrop-filter: blur(4px);
       }
       .Item-heading{
       display: flex;
@@ -77,154 +84,199 @@
         font-weight: bold;
         color: #1e1a4d;
       }
+    .category-nav{
+        position: sticky;
+        top: 10px;
+        z-index: 50;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px 10px;
+        overflow-x: auto;
+        padding: 10px 16px;
+        margin: 10 px 0 20px 0;
+        background: rgbs(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 60px;
+        border: 2px solid rgba(255,255,255,0.8);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .category-nav::-webkit-scrollbar{
+        display: none;
+    }
+    .category-nav a{
+        display: inline-block;
+        padding: 6px 18px;
+        border-radius: 60px;
+        background: rgba(241, 107, 41, 0.10);
+        color: #181254;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        cursor: pointer;
+   }
+   .category-nav a:hover{
+    background: #f16b29;
+    color: white;
+    box-shadow: 0 4px 12px rgba(241,107,410.3);
+    border-color: #ffffff80;
+   }
+
+   @media (max-width: 500px){
+    .menu{
+        padding: 14px 14px 28px;
+   }
+   .category-nav a{
+    font-size: 0.75rem;
+    padding: 5px 12px;
+   }
+ }
   </style>
 </head>
 <body>
-  <div class="logo-container">
-     <img src="SweetLand_Logo.PNG" class="logo">
-  </div>
-<div class="menu">
-  <div> <!--Crepes-->
-    <div class="Item-heading">
-     <h1>Crêpes</h1>
-    </div>
-   <div>
-    <strong class="item"> Crêpe Nutella <span class="price">6$</span></strong>
-    <p>Nutella, Vanilla Ice Cream, White Chocolate, Nutella Biscuits.</p>
-   </div>
-   <div>
-    <strong class="item">Crêpe Oreo <span class="price">7.5$</span> </strong>
-    <p>Chocolate, Oreo, Vanilla Ice Cream, White Chocolate.</p>
-   </div>
-   <div>
-    <strong class="item">Crêpe Lotus <span class="price">6$</span></strong>
-    <p>Lotus Spread, Vanilla Ice Cream, Chocolate Dip.</p>
-   </div>
-   <div>
-    <strong class="item">Pistachio Crêpe <span class="price">7$</span></strong>
-    <p>Crunchy Pistachio, Vanilla Ice Cream, Pistachio Spread, White Chocolate </p>
-   </div>
-   <div>
-    <strong class="item">Kinder Bueno Crêpe <span class="price">7$</span></strong>
-    <P>Bueno Spread, Vanilla Ice Cream, White Chocolate, Chocolate Spread.</P>
-   </div>
-   <div>
-    <strong class="item">Kinder Chocolate Crêpe <span class="price">7$</span></strong>
-    <P>Bueno Spread, Vanilla Ice Cream, White Chocolate, Chocolate Spread.</P>
-   </div>
-   <div>
-    <strong class="item"> Dubai Chocolate Crêpe <span class="price">8$</span></strong>
-    <p>Crunchy Pistachio Spread, Toasted Kunafa, Ice Cream, White Chocolate.</p>
-   </div>
-   <div>
-    <strong class="item">Peanut Butter Crêpe <span class="price">6$</span></strong>
-    <p>Peanut Butter Spread, Ice Cream, White Chocolate.</p>
-   </div>
-   
-  </div>
+    <div class="menu">
 
+        <div class="logo-container">
+            <img src="SweetLand_Logo.PNG" class="logo" alt="Sweet Land logo">
+        </div>
 
-  <div><!--Waffles-->
-    <div class="Item-heading">
-      <h1>Waffles</h1>
-    </div>
-    <div>
-      <strong class="item"> Nutella Waffle <span class="price">5$</span></strong>
-      <p>Nuteela Spread, Vanilla Ice Cream, White Chocolate.</p>
-    </div>
-    <div>
-      <strong class="item">Lotus Waffle <span class="price">5.5$</span></strong>
-      <p>Lotus Spread, Vanilla Ice Cream, White Chocolate.</p>
-    </div>
-    <div>
-      <strong class="item">Pistachio Waffle <span class="price">7$</span></strong>
-      <p>Crunchy Pistachio, Vanilla Ice Cream, Pistachio Spread, White Chocolate.</p>
-    </div>
-    <div>
-      <strong class="item">Kinder Bueno Waffle <span class="price">7$</span></strong>
-      <p>Bueno Spread, Vanilla Ice Cream, White Chocolate.</p>
-    </div>
-    <div>
-      <strong class="item">Oreo Waffle <span class="price">6$</span></strong>
-      <p>Crunchy Oreo SPread, Vanilla Ice Cream, White Chocolate, Chocolate Spread.</p>
-    </div>
-    <div>
-      <strong class="item">Dubai Chocolate Waffle <span class="price">8$</span></strong>
-      <p>Crunchy Pistachio Spread, Toasted Kunafa, Ice Cream, White Chocolate.</p>
-    </div>
-    <div>
-      <strong class="item">Peanut Butter Waffle <span class="price">6$</span></strong>
-      <p>Peanut BUtter Spread, Ice Cream, White Chocolate.</p>
-    </div>
+    <nav class="category-nav" id="categoryNav">
+        <a href="#crepes" class="active">Crêpes</a>
+        <a href="#waffles">Waffles</a>
+        <a href="#cheesecake">Cheesecake</a>
+        <a href="#icecream">IceCream</a>
+        <a href="#cake">Cakes</a>
+        <a href="#cups">Cups</a>
+        <a href="#hotbeverages">Hot Beverages</a>
+        <a href="#coldbeverages">Cold Beverages</a>
+        <!--add more links for more categoties-->
+    </nav>
 
-  </div>
-
-  <div><!--minipancake-->
-    <div class="Item-heading">
-      <h1>Mini Pancake</h1>
+    
+    <!--crêpes section-->
+    <div class="menu-section" id="crepes">
+        <div class="Item-heading">
+            <h1>Crêpes</h1>
+        </div>
+        <div>
+            <strong class="item">Nutella Crepe <span class="price">6$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Hazelnut Crepe <span class="price">6$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Nutella oreo Crepe  <span class="price">6.5$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Lotus crepe <span class="price">6.5$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Beuno Crepe <span class="price">7$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Kinder Crepe <span class="price">7$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Fettucini Nutella Crepe <span class="price">7$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Fettucini Pistachio Crepe <span class="price">7$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Pistachio Crepe <span class="price">7.5$</span></strong>
+        </div>
+        <div>
+            <strong class="item">Dubai Chocolate Crepe <span class="price">7.5$</span></strong>
+        </div>
     </div>
-     <div>
-      <strong class="item">Mini pancake Nutella <span class="price">5$</span></strong>
-     </div><br>
-     <div>
-      <strong class="item">Mini pancake Oreo <span class="price">6$</span></strong>
-     </div>
-  </div>
+         
+        <!--Waffle Section-->
+        <div class="menu-section" id="waffles">
+            <div class="Item-heading">
+                <h1>Waffles</h1>
+            </div>
+            <div>
+                <strong class="item">Waffle Stick <span class="price"4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Nutella Waffle <span class="price"5$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Lotus Waffle <span class="price"></span></strong>
+            </div>
+            <div>
+                <strong class="item">Oreo Waffle <span class="price"></span></strong>
+            </div>
+            <div>
+                <strong class="item">Peanut Butter Waffle <span class="price"></span></strong>
+            </div>
+            <div>
+                <strong class="item">KinderBueno Waffle <span class="price"></span></strong>
+            </div>
+            <div>
+                <strong class="item">Kinder Chocolate Waffle <span class="price"></span></strong>
+            </div>
+            <div>
+                <strong class="item">Pistachio Waffle <span class="price"></span></strong>
+            </div>
+            <div>
+                <strong class="item">Dubai Chocolate Waffle <span class="price"></span></strong>
+            </div>
+        </div>
 
-  <div><!--Cocktails-->
-   <div class="Item-heading">
-    <h1>Cocktails</h1>
-   </div>
-   <div>
-    <strong class="item">Strawberry Cocktail (juice)<span class="price">6$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Cocktail (Slices)<span class="price">8$</span></strong>
-    <p>Strawberry, Banana, Kiwi, Ice Cream, Cashew.</p>
-   </div>
-   <div>
-    <strong class="item">Avocado Cocktail<span class="price">8$</span></strong>
-   </div>
-  </div>
-
-   <div><!--Desserts-->
-   <div class="Item-heading">
-    <h1>Desserts</h1>
-   </div>
-   <div>
-    <strong class="item">Chocolate Biscuit Cake<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Ashta Halawet Jeben<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Ashta 3esmaliye<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item"> Cheesecake Kinder<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Cheesecake Strawberry<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Cheescake Blackberry<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Cheesecake Lotus<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Cheescake Pistachio<span class="price">5$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Cheesecake Oreo<span class="price">5$</span></strong>
-   </div><br>
-  </div>
-
-  <div><!--Ice Cream-->
-    <div class="Item-heading">
-      <h1>Ice Cream</h1>
-    </div>
-    <div class="flavor-list" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 400px; margin: auto;">
+          <!--dessert can-->
+        <div class="menu-section" id="cheesecake">
+            <div class="Item-heading">
+                <h1> Cheesecake</h1>
+            </div>
+            <div>
+                <strong class="item">Oreo Cheesecake can<span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Strawberry Cheesecake can <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Pistachio Cheescake can <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Kinder Cheesecake can <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Speculoos Cheesecake can <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Blueberry Cheesecake can<span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Tiramissu can <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Lotus Cheesecake <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Biscuit au Chocolat <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Fondat <span class="price">5$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Custard <span class="price">2$</span></strong>
+            </div>
+        </div>
+          
+           
+        <!--icecream-->
+          <div class="menu-section" id="icecream">
+            <div class="Item-heading">
+                <h1>IceCream</h1>
+            </div>
+                <div class="flavor-list" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 400px; margin: auto;">
      <span class="flavor" style="background-color: #f3e5ab;">Vanilla</span>
      <span class="flavor" style="background-color: #3e2723; color: whitesmoke;">Chocolate</span>
      <span class="flavor" style="background-color: #fc5a8d;">Strawberry</span>
@@ -246,55 +298,191 @@
     <strong class="item">1 scoop  &nbsp;&nbsp;&nbsp;&nbsp;2$</strong><br>
     <strong class="item">Each additional scoop  &nbsp;&nbsp;&nbsp;&nbsp;1$</strong>
   </div>
+</div>
 
-  </div>
 
+<!--Cakes-->
 
-  <div><!--Specialties-->
-   <div class="Item-heading">
-    <h1>Sweet Land Specilties</h1>
-   </div>
-   <div>
-    <strong class="item">Waffle Sticks<span class="price">4$</span></strong>
-   </div><br>
-   <div>
-    <strong class="item">Sweet Land Platter<span class="price">14$</span></strong>
-   </div><br>
-     <div>
-    <strong class="item">Dubai Chocolate Croissant<span class="price">5$</span></strong>
-   </div>
+<div class="menu-section" id="cake">
+    <div class="Item-heading">
+        <h1>Cake</h1>
+    </div>
+    <div>
+        <strong class="item">Biscuit au Chocolat <span class="price">22$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Oreo Kitkat <span class="price">20$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Panier Mixed <span class="price">35$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Biscuit au Chocolat long <span class="price">17$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Brownies <span class="price">27$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Fruitti di Bosco <span class="price">30$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Chocolate Fondant <span class="price"></span></strong>
+    </div>
+    <div>
+        <strong class="item">Glacé  choco-snickers <span class="price"></span></strong>
+    </div>
+    <div>
+        <strong class="item">Glacé choc-straw-van <span class="price">22$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Panier Profiterole <span class="price">35$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Ashta w wared <span class="price"></span></strong>
+    </div>
+    <div>
+        <strong class="item">Ashta w ghazal <span class="price">25$</span></strong>
+    </div>
+    <div>
+        <strong class="item">Tarte mixed <span class="price">18$</span></strong>
+    </div>
+</div>
+
+        <!--section cups-->
+        <div class="menu-section" id="cups">
+            <div class="Item-heading">
+                <h1>Cups</h1>
+            </div>
+            <div>
+                <strong class="item">Choco Royale <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Pistachio royalw <span class="price">4$</span></strong>
+            </div>
+            <div>
+                <strong class="item">Affogato<span class="price">4$</span></strong>
+            </div>
+        </div>
+
+        <!--hot beverages-->
+        <div class="menu-section" id="hotbeverages">
+            <div class="Item-heading">
+                <h1>Hot Beverages</h1>
+            </div>
+            <div>
+                <strong class="item">Nescafe (3in1)<span class="price">100,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Nescafe (2in1) <span class="price">100,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Espresso<span class="price">100,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Tea<span class="price">100,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Green tea<span class="price">100,000 L.L</span></strong>
+            </div>
+        </div>
+
+        <!--cold beverages-->
+        <div class="menu-section" id="coldbeverages">
+            <div class="Item-heading">
+                <h1>Cold Beverages</h1>
+            </div>
+            <div>
+                <strong class="item">Water<span class="price">50,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Iced Coffee<span class="price">100,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Iced Coffee Mocha<span class="price">100,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Milkshake Strawberry<span class="price">80,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Milkshake Chocolate<span class="price">80,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Redbull <span class="price">180,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Perrier<span class="price">140,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Maccaw Juice<span class="price">90,000 L.L</span></strong>
+            </div>
+            <div>
+                <strong class="item">Xtra <span class="price">80,000 L.L</span></strong>
+            </div>
+        </div>
+
    
-  </div>
 
-  
-  <div> <!--Add ons-->
-      <div class="Item-heading">
-      <h1>Add Ons</h1>
-     </div>
-     <div style="display: flex; flex-direction: column; align-items: center;">
-      <div class="item-line"><span>Banana</span><span class="price">1$</span></div>
-      <div class="item-line"><span>Strawberry</span><span class="price">2$</span></div>
-      <div class="item-line"><span>Kiwi</span><span class="price">2$</span></div>
-      <div class="item-line"><span>One Scoop Ice Cream</span><span class="price">1$</span></div>
-      <div class="item-line"><span>Cornflakes</span><span class="price">0.5$</span></div>
-      <div class="item-line"><span>Oreo</span><span class="price">0.5$</span></div>
-      <div class="item-line"><span>Lotus</span><span class="price">0.5$</span></div>
-      <div class="item-line"><span>Kinder Bueno</span><span class="price">1.5$</span></div>
-      <div class="item-line"><span>Kitkat</span><span class="price">1$</span></div>
-      <div class="item-line"><span>M&M's</span><span class="price">1$</span></div>
-      <div class="item-line"><span>Marshmallow</span><span class="price">0.7$</span></div>
-      <div class="item-line"><span>Pineapple</span><span class="price">2.5$</span></div>
-      <div class="item-line"><span>Maltersers</span><span class="price">1$</span></div>
-      <div class="item-line"><span>Nutella Dip</span><span class="price">1$</span></div>
-      <div class="item-line"><span>Lotus Dip</span><span class="price">2$</span></div>
-      <div class="item-line"><span>White Chocolate Dip</span><span class="price">2$</span></div>
+
+        <script>
+            (function(){
+                const nav = document.querySelector('.category-nav');
+                const navLinks = document.querySelectorAll('.category-nav a');
+                const targetSection = document.getElementById('crepes');
+
+                function getNavHeight(){
+                    return nav ? nav.offsetHeight +20 : 80;
+                }
+                function scrollToSection(TargetID){
+                    const target = document.getElementById(targetId);
+                    if(!target) return;
+                    const navHight = getNavHeight();
+                    const targetRect= target.getBoundingCLientRect();
+                    const scrollTragetY = window.pageYOffset + targetRect.top - navHeight;
+                    window.scrollTo({
+                        top: scrollTargetY,
+                        behavior: 'smooth'
+                    });
+                }
+            function updateActiveLink(){
+                navLinks.forEach(link =>{
+                    link.classList.add('active');
+                });
+            }
+            navLinks.forEach(link=>{
+                link.addEventListener('Click',function(e){
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    if (href && href.startswith('#')){
+                        const targetId = href.substring(1);
+                        scrollToSection(targetId);
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classlist.add('active');
+                    }
+                });
+            });
+            let ticking = false;
+            window.addEventListener('scroll', function(){
+                if (!ticking){
+                    window.requestAnimationFrame(function (){
+                        updateActiveLink();
+                        ticking= false;
+                    });
+                    ticking= true;
+                }
+            });
+            updateActiveLink();
+            if (window.location.hash){
+                const hash = window.location.hash.substring(1);
+                if (document.getElementById(hash)){
+                    setTimeout(function(){
+                        scrollToSection(hash);
+                    }, 100);
+                }
+            }
+            })();
+        </script>
+
+    </div>
     </div>
 
-  </div>
-</div>
-  </div>
-
-
-</div>
-</div>
 </body>
